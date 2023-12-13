@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      #homepage {
+        display: flex;
+        justify-content: center;
+      }
+
+      .button {
+        width: 5rem;
+        height: 5rem;
+        border: 2px solid black;
+        cursor: pointer;
+        margin: 10rem auto;
+      }
+
+      #grey {
+        background-color: rgb(203, 197, 197);
+      }
+
+      #red {
+        background-color: rgb(228, 133, 133);
+      }
+
+      #skyblue {
+        background-color: rgb(171, 171, 225);
+      }
+
+      #yellow {
+        background-color: rgb(226, 226, 142);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="homepage">
+      <div class="button" id="grey"></div>
+      <div class="button" id="red"></div>
+      <div class="button" id="skyblue"></div>
+      <div class="button" id="yellow"></div>
+    </div>
+
+    <script>
+      const allButtons = document.querySelectorAll(".button");
+      const body = document.querySelector("body");
+      allButtons.forEach((buttons) => {
+        buttons.addEventListener("click", function (e) {
+          if (e.target.id === "grey") {
+            body.style.backgroundColor = "rgb(203, 197, 197)";
+          }
+          if (e.target.id === "red") {
+            body.style.backgroundColor = "rgb(228, 133, 133)";
+          }
+          if (e.target.id === "skyblue") {
+            body.style.backgroundColor = "rgb(171, 171, 225)";
+          }
+          if (e.target.id === "yellow") {
+            body.style.backgroundColor = "rgb(226, 226, 142)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
